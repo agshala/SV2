@@ -5,7 +5,7 @@
 ![Frequenzberechnung](HIER_DEIN_LINK)
 
 ## 2. Aufbau im Falstad-Simulator
-![Task1Falstad](https://raw.githubusercontent.com/agshala/SV2/main/task1_falstad.png)
+![Task1Falstad](https://raw.githubusercontent.com/agshala/SV2/main/task_1falstad.png)
 
 ## 3. Frequenz im Simulator
 Die Frequenz im Simulator beträgt ca. 5 kHz.
