@@ -347,3 +347,80 @@ Die Simulation bestätigt:
 - Der LC-Bandpass filtert die Obertöne der Rechteckschwingung.
 - Nur die Grundfrequenz bei f₀ ≈ 50,3 kHz wird durchgelassen.
 - Das Ausgangssignal ist nahezu sinusförmig.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Task 6 – Fourier-Analyse eines komplexen Filters
+
+## 1. Ziel
+Ziel dieser Aufgabe ist es, die Fourier-Zerlegung einer Rechteckschwingung mit dem Frequenzverhalten eines komplexen Bandpass-Filters zu verknüpfen.  
+Untersucht wird, wie ein Filter mit mehreren Resonanzstellen aus einer Rechteckspannung einzelne Harmonische selektiv verstärkt und andere stark dämpft.
+
+## 2. Theoretischer Hintergrund
+
+Eine ideale Rechteckschwingung besteht aus:
+
+- Grundfrequenz f₁  
+- Ungeraden Harmonischen:  
+  - 3. Harmonische: 3·f₁  
+  - 5. Harmonische: 5·f₁  
+  - 7. Harmonische: 7·f₁  
+  - ...
+
+Ein Filter mit einer ausgeprägten Resonanzfrequenz f₀ lässt nur Frequenzen in der Nähe von f₀ passieren und unterdrückt alle anderen.
+
+## 3. Aufbau der Schaltung (nach Folie 15)
+
+Bauteile:
+
+| Bauteil | Wert |
+|--------|------|
+| Quelle | Rechteckspannung, 5 V |
+| L1 | 10 µH |
+| C1 | 1 nF |
+| R1 | 25 Ω |
+| C2 | 2 nF |
+| L2 | 20 µH |
+| R2 | 100 Ω |
+
+Die Schaltung bildet eine T-Struktur aus zwei Schwingkreisen und einem Serienwiderstand.
+
+## 4. Simulationen (GIFs)
+
+### a) Grundfrequenz bei 1.2 MHz
+![1.2 MHz](https://raw.githubusercontent.com/agshala/SV2/main/Task6_1.2MHz.gif)
+
+### b) 3. Harmonische bei 3.5 MHz
+![3.5 MHz](https://raw.githubusercontent.com/agshala/SV2/main/Task6_3.5MHz.gif)
+
+### c) Resonanz bei 5.9 MHz
+![5.9 MHz](https://raw.githubusercontent.com/agshala/SV2/main/Task6_5.9MHz.gif)
+
+## 5. Beobachtungen
+
+### Zeitbereich
+- Eingang: Rechtecksignal mit steilen Flanken  
+- Ausgang:
+  - Bei 1.2 MHz: stark gedämpft
+  - Bei 3.5 MHz: leicht verstärkt
+  - Bei 5.9 MHz: nahezu sinusförmig mit maximaler Amplitude
+
+### Frequenzbereich
+- Eingangsspektrum:  
+  - Linien bei f₁, 3f₁, 5f₁, 7f₁, ...
+- Ausgangsspektrum:
+  - Dominanter Peak bei der Resonanzfrequenz (~5.9 MHz)
+  - Niedrige Frequenzen und höhere Harmonische stark gedämpft
+
+## 6. Erklärung
+
+Das Filter wirkt als selektiver Frequenzdetektor:
+
+- Die Grundfrequenz der Rechteckwelle liegt weit außerhalb des Durchlassbereichs → wird unterdrückt.
+- Die 3. Harmonische liegt näher am Durchlassbereich → teilweise sichtbar.
+- Die 5. Harmonische liegt nahe der Resonanzfrequenz → maximale Verstärkung.
+
+Durch die Filterung der Fourier-Komponenten bleibt am Ausgang nahezu nur diejenige Sinusschwingung übrig, deren Frequenz der Resonanzfrequenz des Filters entspricht.  
+
+Das Rechtecksignal wird dadurch in eine nahezu reine Sinusschwingung transformiert – ein praktisches Beispiel für spektrale Filterung nach der Fourier-Theorie.
