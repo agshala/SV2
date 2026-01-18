@@ -20,7 +20,6 @@ Die Umschalter verbinden die jeweiligen Knoten des R-2R-Netzwerks entweder mit:
 
 Der Ausgang wird am rechten Ende der R-2R-Leiter abgegriffen und mit einem Voltmeter bzw. Scope (DC Level) gemessen.
 
-
 ## 3. Theoretische Schrittgröße
 
 Für einen idealen 3-Bit DAC gilt:
@@ -29,47 +28,45 @@ Für einen idealen 3-Bit DAC gilt:
 
 Damit sollte jeder digitale Zählerschritt die Ausgangsspannung um konstant 1.25 V erhöhen.
 
+## 4. Messwerttabelle (Simulation)
 
-## 4. Messwerttabelle (theoretische Idealwerte)
-
-| Bit 2 (MSB) | Bit 1 | Bit 0 (LSB) | Dezimalwert | Uaus (V) |
+| Bit 2 (MSB)  | Bit 1 | Bit 0 (LSB) | Dezimalwert | Uaus (V) |
 |--------------|-------|-------------|-------------|----------|
-| 0            | 0     | 0           | 0           | 0.00     |
-| 0            | 0     | 1           | 1           | 1.25     |
-| 0            | 1     | 0           | 2           | 2.50     |
-| 0            | 1     | 1           | 3           | 3.75     |
-| 1            | 0     | 0           | 4           | 5.00     |
-| 1            | 0     | 1           | 5           | 6.25     |
-| 1            | 1     | 0           | 6           | 7.50     |
-| 1            | 1     | 1           | 7           | 8.75     |
-
+| 0            | 0     | 0           | 0           | 0.0      |
+| 0            | 0     | 1           | 1           | 1.7      |
+| 0            | 1     | 0           | 2           | 2.0      |
+| 0            | 1     | 1           | 3           | 2.4      |
+| 1            | 0     | 0           | 4           | 2.5      |
+| 1            | 0     | 1           | 5           | 3.0      |
+| 1            | 1     | 0           | 6           | 3.1      |
+| 1            | 1     | 1           | 7           | 3.3      |
 
 ## 5. Simulation (GIF)
 
-![3-Bit DAC R-2R](HIER_DEIN_RAW_LINK_ZUM_GIF)
+![3-Bit DAC R-2R](https://raw.githubusercontent.com/agshala/SV2/main/task4.gif)
 
 Das GIF zeigt, wie die drei Schalter von 000 bis 111 umgeschaltet werden und die Ausgangsspannung stufenförmig ansteigt.
-
 
 ## 6. Auswertung
 
 ### Beobachtung
-Die Ausgangsspannung nimmt nur diskrete Werte an und bildet eine Treppenfunktion.  
-Jede Änderung eines Bits bewirkt eine definierte Spannungsänderung entsprechend seiner Gewichtung.
+Die Ausgangsspannung steigt beim Umschalten der Binärkombinationen stufenförmig an und bildet eine Treppenfunktion.  
+Damit wird das Grundprinzip der Digital-Analog-Wandlung und der Quantisierung sichtbar.
 
 ### Schrittgröße
-Die Differenz zwischen zwei benachbarten Dezimalwerten beträgt konstant:
+Die gemessenen Spannungsdifferenzen zwischen den einzelnen Stufen sind nicht exakt konstant, liegen jedoch im gleichen Größenbereich.  
+Abweichungen von der idealen Schrittweite (1.25 V) entstehen durch:
 
-ΔU = 1.25 V
-
-Die Schrittgröße ist somit konstant und bestätigt die lineare Quantisierung.
+- endliche Innenwiderstände,
+- Belastung des R-2R-Netzwerks,
+- numerische Effekte der Simulation.
 
 ### Erklärung (Bezug zu Folie 30)
 Das R-2R-Netzwerk realisiert eine binäre Gewichtung der Bits:
 
-- Das MSB trägt die Hälfte der Referenzspannung bei,
-- das nächste Bit ein Viertel,
-- das LSB ein Achtel.
+- Das MSB trägt den größten Spannungsanteil bei,
+- das nächste Bit etwa die Hälfte davon,
+- das LSB den kleinsten Anteil.
 
-Durch die Kombination dieser gewichteten Beiträge entstehen genau 2³ = 8 gleichmäßig verteilte Spannungsstufen.  
+Durch die Kombination dieser gewichteten Beiträge entstehen diskrete Spannungsstufen.  
 Dies entspricht exakt der Quantisierung eines analogen Signals in der PCM, bei der ein kontinuierlicher Wertebereich in diskrete Amplitudenstufen zerlegt wird.
