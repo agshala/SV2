@@ -1,3 +1,17 @@
+# Student Information
+
+|                   |                             |
+|-------------------|-----------------------------|
+| Name              | Agnesa Shala                |
+| Matrikelnummer    | 223289                      |
+| Studiengang       |Software Engineering Bachelor|
+| Kurs              | SV2                         |
+| Betreuer          | Marc Nauendorf              |
+| Akademisches Jahr | 2025/2026                   |
+
+
+
+
 # Task 1
 
 ## 1. Berechnung theoretische Resonanzfrequenz (f_0)
