@@ -34,6 +34,8 @@ Die Frequenz im Simulator beträgt ca. 5 kHz.
 Theorie und Simulation stimmen überein. Bei Resonanz ist die Impedanz minimal und der Strom maximal.
 
 
+
+
 # Task 2 – Güte eines Reihenschwingkreises
 
 ## Ziel
@@ -90,6 +92,8 @@ Die Simulation bestätigt die Aussage aus Folie 9:
 **Je größer die Güte Q, desto schmaler ist die Resonanzkurve und desto kleiner ist die Bandbreite.**  
 Ein größerer Widerstand führt zu stärkerer Dämpfung, geringerer Güte und einer
 breiteren, flacheren Resonanzkurve.
+
+
 
 
 
@@ -191,6 +195,7 @@ Damit ist der fundamentale Unterschied zwischen **Bandpass** und **Bandsperre** 
 
 
 
+
 # Task 4 – 3-Bit D/A-Wandler (R-2R-Leiternetzwerk)
 
 ## 1. Ziel
@@ -263,6 +268,8 @@ Das R-2R-Netzwerk realisiert eine binäre Gewichtung der Bits:
 
 Durch die Kombination dieser gewichteten Beiträge entstehen diskrete Spannungsstufen.  
 Dies entspricht exakt der Quantisierung eines analogen Signals in der PCM, bei der ein kontinuierlicher Wertebereich in diskrete Amplitudenstufen zerlegt wird.
+
+
 
 
 
@@ -343,6 +350,8 @@ Die Simulation bestätigt:
 - Der LC-Bandpass filtert die Obertöne der Rechteckschwingung.
 - Nur die Grundfrequenz bei f₀ ≈ 50,3 kHz wird durchgelassen.
 - Das Ausgangssignal ist nahezu sinusförmig.
+
+
 
 
 
