@@ -33,7 +33,6 @@ Die Frequenz im Simulator beträgt ca. 5 kHz.
 ## 4. Vergleich
 Theorie und Simulation stimmen überein. Bei Resonanz ist die Impedanz minimal und der Strom maximal.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Task 2 – Güte eines Reihenschwingkreises
 
@@ -92,7 +91,7 @@ Die Simulation bestätigt die Aussage aus Folie 9:
 Ein größerer Widerstand führt zu stärkerer Dämpfung, geringerer Güte und einer
 breiteren, flacheren Resonanzkurve.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 # Task 3 – LC-Bandpass und LC-Bandsperre
 
@@ -191,8 +190,6 @@ Obwohl beide Schaltungen identische L- und C-Werte besitzen, erzeugt allein die 
 Damit ist der fundamentale Unterschied zwischen **Bandpass** und **Bandsperre** bestätigt.
 
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 
 # Task 4 – 3-Bit D/A-Wandler (R-2R-Leiternetzwerk)
 
@@ -267,7 +264,6 @@ Das R-2R-Netzwerk realisiert eine binäre Gewichtung der Bits:
 Durch die Kombination dieser gewichteten Beiträge entstehen diskrete Spannungsstufen.  
 Dies entspricht exakt der Quantisierung eines analogen Signals in der PCM, bei der ein kontinuierlicher Wertebereich in diskrete Amplitudenstufen zerlegt wird.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 # Task 5 – Filterung von Obertönen (Rechteck-zu-Sinus-Wandler)
@@ -348,7 +344,6 @@ Die Simulation bestätigt:
 - Nur die Grundfrequenz bei f₀ ≈ 50,3 kHz wird durchgelassen.
 - Das Ausgangssignal ist nahezu sinusförmig.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 # Task 6 – Fourier-Analyse eines komplexen Filters
